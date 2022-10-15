@@ -9,3 +9,17 @@ Once the projection screen coordinates are found,the corresponding pc screen coo
 
 Now,to generate the required action,python library PyautoGUI module is used.
 Suppose,a line has to be generated between to points.Initially the points position are calculated.Once the points are obtained,perform the dragTo() function to generate the line between the required points.
+
+Technologies used:
+1.NodeMCU
+2.Ultrasonic sensors
+3.Python
+
+STEPS TO GENERATE A LINE BETWEEN POINTS (X1,Y1) and (X2,Y2)
+1. Calculate X1,Y1 using ultrasonic sensors.
+2. Send the calculated coordinates to the host PC using Nodemcu and the wi-fi module inside it.
+3. Scale the obtained coordinates using the scale factors SX and SY.
+4. Obtain the scaled screen coordinates.
+5. Repeat steps 1 to 4 to calculate the screen coordinates of X2,Y2.
+
+6.Once both coordinates are obtained,use the pyAutoGUI library to generate a mouse drag operation.
